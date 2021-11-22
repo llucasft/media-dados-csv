@@ -54,9 +54,9 @@ with open("C:/Users/USUARIO/desafiopython/kchousedata.csv", mode="r") as arq:
 
     media_above = calculo_media(txt='SQFT_ABOVE', lista=above)
 
-    espaços = ['sqft_living', 'sqft_lot', 'sqft_above']
+    espacos = ['sqft_living', 'sqft_lot', 'sqft_above']
     comodos = [media_living, media_lot, media_above]
-    posição = 0
+    position = 0
 
     with open("C:/Users/USUARIO/desafiopython/resultado.csv", mode="w", newline='') as resultado:
 
@@ -67,5 +67,5 @@ with open("C:/Users/USUARIO/desafiopython/kchousedata.csv", mode="r") as arq:
         criador.writeheader()
 
         for ambiente in comodos:
-            criador.writerow({'comodo': espaços[posição], 'media': comodos[posição]})
-            posição += 1
+            criador.writerow({'comodo': espacos[position], 'media': comodos[position]})
+            position += 1
